@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="I “lurk” in a couple of general development chat rooms, and I try to answer questions from time to time. Today I started to answer someone’s question on recursion. I fortunately thought to draft my re">
+<meta name="keywords" content="Help Recursion">
+<meta property="og:type" content="article">
+<meta property="og:title" content="answering-slack-questions-1">
+<meta property="og:url" content="http://kbyedev.com/2017/10/15/answering-slack-questions-1/index.html">
+<meta property="og:site_name" content="Kirk Byers">
+<meta property="og:description" content="I “lurk” in a couple of general development chat rooms, and I try to answer questions from time to time. Today I started to answer someone’s question on recursion. I fortunately thought to draft my re">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-10-16T01:16:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="answering-slack-questions-1">
+<meta name="twitter:description" content="I “lurk” in a couple of general development chat rooms, and I try to answer questions from time to time. Today I started to answer someone’s question on recursion. I fortunately thought to draft my re">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>answering-slack-questions-1</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/08/08/Pokemon-Go-Plus/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://kbyedev.com/2017/10/15/answering-slack-questions-1/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&text=answering-slack-questions-1"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&title=answering-slack-questions-1"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&is_video=false&description=answering-slack-questions-1"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=answering-slack-questions-1&body=Check out this article: http://kbyedev.com/2017/10/15/answering-slack-questions-1/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&title=answering-slack-questions-1"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&title=answering-slack-questions-1"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&title=answering-slack-questions-1"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&title=answering-slack-questions-1"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&name=answering-slack-questions-1&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-message"><span class="toc-number">1.</span> <span class="toc-text">The message</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Breakdown"><span class="toc-number">2.</span> <span class="toc-text">Breakdown</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Logical-operators-at-evaluation"><span class="toc-number">2.1.</span> <span class="toc-text">Logical operators at evaluation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Walkthrough-of-simplified-code"><span class="toc-number">2.2.</span> <span class="toc-text">Walkthrough of simplified code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Answer-to-comment-in-code"><span class="toc-number">2.3.</span> <span class="toc-text">Answer to comment in code</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        answering-slack-questions-1
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Kirk Byers</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-10-16T01:16:03.000Z" itemprop="datePublished">2017-10-15</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Help-Recursion/">Help Recursion</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>I “lurk” in a couple of general development chat rooms, and I try to answer questions from time to time. Today I started to answer someone’s question on recursion. I fortunately thought to draft my response offline as my post became lengthy. I boiled my draft down to a more direct, slack-appropriate answer, but I finished my draft to this post. I hope this may help anyone working on understanding recursion with logic operators.</p>
+<h2 id="The-message"><a href="#The-message" class="headerlink" title="The message"></a>The message</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Dev [12:18 AM] </div><div class="line">Hi guys I have a problem with understanding recursion function. Can someone explain what happens after find(33) part in this http://jsbin.com/revajurica/edit?js,console</div></pre></td></tr></table></figure>
+<p>At the link is the following code:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">findSolution</span>(<span class="params">target</span>) </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">find</span>(<span class="params">current, history</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (current == target)</div><div class="line">      <span class="keyword">return</span> history;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (current &gt; target)</div><div class="line">      <span class="keyword">return</span> <span class="literal">null</span>;</div><div class="line">    <span class="keyword">else</span></div><div class="line">      <span class="keyword">return</span> find(current + <span class="number">5</span>, <span class="string">"("</span> + history + <span class="string">" + 5)"</span>) ||</div><div class="line">             find(current * <span class="number">3</span>, <span class="string">"("</span> + history + <span class="string">" * 3)"</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> find(<span class="number">1</span>, <span class="string">"1"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(findSolution(<span class="number">13</span>));</div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"></span></div><div class="line"><span class="comment">Working </span></div><div class="line"><span class="comment"></span></div><div class="line"><span class="comment">find(1, "1")</span></div><div class="line"><span class="comment">  find(6, "(1 + 5)")</span></div><div class="line"><span class="comment">    find(11, "((1 + 5) + 5)")</span></div><div class="line"><span class="comment">      find(16, "(((1 + 5) + 5) + 5)")</span></div><div class="line"><span class="comment">        too big</span></div><div class="line"><span class="comment">      find(33, "(((1 + 5) + 5) * 3)") //why does this remove +5 from earlier and not *3 it just called</span></div><div class="line"><span class="comment">        too big </span></div><div class="line"><span class="comment">    find(18, "((1 + 5) * 3)")</span></div><div class="line"><span class="comment">      too big</span></div><div class="line"><span class="comment">  find(3, "(1 * 3)")</span></div><div class="line"><span class="comment">    find(8, "((1 * 3) + 5)")</span></div><div class="line"><span class="comment">      find(13, "(((1 * 3) + 5) + 5)")</span></div><div class="line"><span class="comment">        found!</span></div><div class="line"><span class="comment">        </span></div><div class="line"><span class="comment">*/</span></div></pre></td></tr></table></figure>
+<h2 id="Breakdown"><a href="#Breakdown" class="headerlink" title="Breakdown"></a>Breakdown</h2><p>Lets start to break this down.</p>
+<p><code>findSolution(target)</code> defines the function <code>find(current, history)</code> within its scope, and then calls <code>return find(1, &quot;1&quot;)</code>.</p>
+<p><code>find</code> checks if the its <code>current</code> argument loosely equals the <code>target</code> argument from the parent scope. If it does, then the <code>history</code> argument is returned. <code>else if</code> <code>current</code> is grater than <code>target</code>, then <code>null</code> is returned. <code>else</code> return <code>find(current + 5, &quot;(&quot; + history + &quot; + 5)&quot;) || find(current * 3, &quot;(&quot; + history + &quot; * 3)&quot;);</code>. </p>
+<p>If we think about the “truethiness” of <code>null</code>, we can think think of the code in the <code>else if</code> block of <code>find</code> like the following.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">findSolution</span>(<span class="params">target</span>) </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">find</span>(<span class="params">current, history</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (current == target)</div><div class="line">      <span class="keyword">return</span> history;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (current &gt; target)</div><div class="line">      <span class="comment">// replace null with truthiness for simplicity</span></div><div class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    <span class="keyword">else</span></div><div class="line">      <span class="keyword">return</span> find(current + <span class="number">5</span>, <span class="string">"("</span> + history + <span class="string">" + 5)"</span>) ||</div><div class="line">             find(current * <span class="number">3</span>, <span class="string">"("</span> + history + <span class="string">" * 3)"</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> find(<span class="number">1</span>, <span class="string">"1"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(findSolution(<span class="number">13</span>));</div></pre></td></tr></table></figure>
+<p>Additionally, if we look closely at the code, we can see that <code>history</code> is a string that keeps track of which part of the logical statement was returned. If <code>history</code> is not returned, then the operation is not added to <code>history</code>. For our purposes, we can ignore it and think of the code like the following.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">findSolution</span>(<span class="params">target</span>) </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">find</span>(<span class="params">current</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (current == target)</div><div class="line">      <span class="comment">// history replaced with its "truethiness"</span></div><div class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (current &gt; target)</div><div class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    <span class="keyword">else</span></div><div class="line">      <span class="comment">// remove history for simplicity</span></div><div class="line">      <span class="keyword">return</span> find(current + <span class="number">5</span>) || find(current * <span class="number">3</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> find(<span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(findSolution(<span class="number">13</span>));</div></pre></td></tr></table></figure>
+<h3 id="Logical-operators-at-evaluation"><a href="#Logical-operators-at-evaluation" class="headerlink" title="Logical operators at evaluation"></a>Logical operators at evaluation</h3><p>The last piece of the puzzle is understanding how JavaScript evaluates <code>return find(current + 5) || find(current * 3);</code>.</p>
+<p><code>||</code> is the “or” logical operator. In JavaScript, the left-hand expression will be evaluated first and then checked for its “truthiness”. If the value of the left-hand expression is “truthy” then the value will be return (not its truthiness), and the right-hand expression will not be evaluated. However, if the left-hand expression is not “truthy”, then the right-hand expression will be evaluated and the value of the right-hand expression will be returned.</p>
+<h3 id="Walkthrough-of-simplified-code"><a href="#Walkthrough-of-simplified-code" class="headerlink" title="Walkthrough of simplified code"></a>Walkthrough of simplified code</h3><p>So what happens? </p>
+<ol>
+<li><p>13 gets plugged into <code>findSolution</code>. <code>find(1)</code> gets called. <code>!(1 == 13)</code> and <code>!(1 &gt; 13)</code>, so then the we try <code>find(1 + 5)</code>.</p>
+</li>
+<li><p><code>find(6)</code> gets called. <code>!(6 == 13)</code> and <code>!(6 &gt; 13)</code>, so we try <code>find(6 + 5)</code>.</p>
+</li>
+<li><p><code>find(11)</code> gets called. <code>!(11 == 13)</code> and <code>!(11 &gt; 13)</code>, so we try <code>find(11 + 5)</code>.</p>
+</li>
+<li><p><code>find(16)</code> gets called. <code>!(16 == 13)</code> but <code>(16 &gt; 13)</code>, so we return false! Since we returned false, we have to evaluate the right-hand expression of the previous step (<code>find(11 * 3)</code>).</p>
+</li>
+<li><p><code>find(33)</code> gets called. <code>!(16 == 13)</code> but <code>(16 &gt; 13)</code>, so we return false! Since we returned false, we have to evaluate the right-hand expression of the previous step (<code>find(6 * 3)</code>).</p>
+</li>
+<li><p><code>find(18)</code> gets called. <code>!(18 == 13)</code> but <code>(18 &gt; 13)</code>, so we return false! Since we returned false, we have to evaluate the right-hand expression of the previous step (<code>find(1 * 3)</code>).</p>
+</li>
+<li><p><code>find(3)</code> gets called. <code>!(3 == 13)</code> and <code>!(3 &gt; 13)</code>, so we try <code>find(3 +5)</code>.</p>
+</li>
+<li><p><code>find(8)</code> gets called. <code>!(8 == 13)</code> and <code>!(8 &gt; 13)</code>, so we try <code>find(8 + 5)</code>.</p>
+</li>
+<li><p><code>find(13)</code> gets called. <code>13 == 13</code>! so we return true and end. </p>
+</li>
+</ol>
+<p>If we trace back all the returned “truthy true” values in order that returned our final call to find, we can build a “history” of <code>(((1 * 3) + 5) + 5)</code>.</p>
+<h3 id="Answer-to-comment-in-code"><a href="#Answer-to-comment-in-code" class="headerlink" title="Answer to comment in code"></a>Answer to comment in code</h3><p>The reason the “+ 5” gets “removed” from history is because that history value never gets returned. In step 4 above, we walk through <code>find(16)</code> having truthiness of false. Since the truthiness of the expression is false, <code>||</code> returns the right-hand expression’s value from <code>return find(11 + 5) || find(11 * 3)</code>.</p>
+<p>In step 5 we see <code>find(33)</code> also has a truthiness of “false”, so we evaluate the right-hand side of an ever earlier step <code>return find(6 + 5) || find(6 * 3)</code>.</p>
+<p>This behavior continues until a complete “truthy path” is found and the corresponding history is returned. </p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-message"><span class="toc-number">1.</span> <span class="toc-text">The message</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Breakdown"><span class="toc-number">2.</span> <span class="toc-text">Breakdown</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Logical-operators-at-evaluation"><span class="toc-number">2.1.</span> <span class="toc-text">Logical operators at evaluation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Walkthrough-of-simplified-code"><span class="toc-number">2.2.</span> <span class="toc-text">Walkthrough of simplified code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Answer-to-comment-in-code"><span class="toc-number">2.3.</span> <span class="toc-text">Answer to comment in code</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://kbyedev.com/2017/10/15/answering-slack-questions-1/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&text=answering-slack-questions-1"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&title=answering-slack-questions-1"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&is_video=false&description=answering-slack-questions-1"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=answering-slack-questions-1&body=Check out this article: http://kbyedev.com/2017/10/15/answering-slack-questions-1/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&title=answering-slack-questions-1"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&title=answering-slack-questions-1"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&title=answering-slack-questions-1"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&title=answering-slack-questions-1"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://kbyedev.com/2017/10/15/answering-slack-questions-1/&name=answering-slack-questions-1&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Powered by <a href="https://hexo.io/" alt="Hexo" target="_blank">Hexo</a> | Modified <a href="https://probberechts.github.io/cactus-dark/" alt="Cactus Dark, a Hexo theme" target="_blank">Cactus Dark</a> theme
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<!-- <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<!-- <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css"> -->
+
+
+<!-- jquery -->
+<!-- <script src="/lib/jquery/jquery.min.js"></script> -->
+<!-- <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script> -->
+<!-- <script src="/js/main.js"></script> -->
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
