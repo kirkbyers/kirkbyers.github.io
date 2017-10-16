@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Kirk Byers">
 <meta property="og:description" content="I “lurk” in a couple of general development chat rooms, and I try to answer questions from time to time. Today I started to answer someone’s question on recursion. I fortunately thought to draft my re">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-16T01:16:25.000Z">
+<meta property="og:updated_time" content="2017-10-16T01:19:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="answering-slack-questions-1">
 <meta name="twitter:description" content="I “lurk” in a couple of general development chat rooms, and I try to answer questions from time to time. Today I started to answer someone’s question on recursion. I fortunately thought to draft my re">
@@ -170,7 +170,7 @@
 </ol>
 <p>If we trace back all the returned “truthy true” values in order that returned our final call to find, we can build a “history” of <code>(((1 * 3) + 5) + 5)</code>.</p>
 <h3 id="Answer-to-comment-in-code"><a href="#Answer-to-comment-in-code" class="headerlink" title="Answer to comment in code"></a>Answer to comment in code</h3><p>The reason the “+ 5” gets “removed” from history is because that history value never gets returned. In step 4 above, we walk through <code>find(16)</code> having truthiness of false. Since the truthiness of the expression is false, <code>||</code> returns the right-hand expression’s value from <code>return find(11 + 5) || find(11 * 3)</code>.</p>
-<p>In step 5 we see <code>find(33)</code> also has a truthiness of “false”, so we evaluate the right-hand side of an ever earlier step <code>return find(6 + 5) || find(6 * 3)</code>.</p>
+<p>In step 5 we see <code>find(33)</code> also has a truthiness of “false”, so we evaluate the right-hand side of an even earlier step <code>return find(6 + 5) || find(6 * 3)</code>.</p>
 <p>This behavior continues until a complete “truthy path” is found and the corresponding history is returned. </p>
 
   </div>
